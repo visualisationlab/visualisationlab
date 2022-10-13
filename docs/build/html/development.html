@@ -81,6 +81,9 @@ The reducers are the state management system, and are used to update the state o
 </div>
 <div class="section" id="server">
 <h2>Server<a class="headerlink" href="#server" title="Permalink to this headline"></a></h2>
+<p>The server runs many sessions at once in an Express server. Each session is a separate instance of a class
+(session) that contains all the information about the session. It communicates with the frontend and the AR headset via
+websockets.</p>
 </div>
 <div class="section" id="ar-unity">
 <h2>AR (Unity)<a class="headerlink" href="#ar-unity" title="Permalink to this headline"></a></h2>
