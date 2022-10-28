@@ -10,6 +10,40 @@ accessing the Visgraph server, the page prompts the user to either enter a URL p
 A unique session ID identifies each visualization session and multiple
 users can connect or disconnect from the same session at any time.
 
+Graph Format
+============
+Visgraph expects graphs to be uploaded in the following format:
+
+
+.. code-block:: JSON
+
+    {
+        "attributes": {
+            "edgeType": "(un)directed",
+        },
+        "nodes": [
+        {
+            "attributes": {
+                ...attributes
+            },
+            "id": ...id,
+            "label": ...id
+        },
+        ...
+        ],
+        "edges": [
+            {
+                "attributes": {
+                    ...attributes
+                },
+                "id": ...id,
+                "source": ...node id,
+                "target": ...node id
+            },
+            ...
+        ]
+    }
+
 Mapping
 =======
 

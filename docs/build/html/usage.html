@@ -36,6 +36,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#graph-format">Graph Format</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mapping">Mapping</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#layout-mapping">Layout Mapping</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#node-mapping">Node Mapping</a></li>
@@ -88,6 +89,38 @@ follows Cytoscape.js, and the GraphML format follows Gephi.</p>
 accessing the Visgraph server, the page prompts the user to either enter a URL pointing to the dataset or join an existing visualization session using the session ID.
 A unique session ID identifies each visualization session and multiple
 users can connect or disconnect from the same session at any time.</p>
+<div class="section" id="graph-format">
+<h2>Graph Format<a class="headerlink" href="#graph-format" title="Permalink to this headline"></a></h2>
+<p>Visgraph expects graphs to be uploaded in the following format:</p>
+<div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span>{
+    &quot;attributes&quot;: {
+        &quot;edgeType&quot;: &quot;(un)directed&quot;,
+    },
+    &quot;nodes&quot;: [
+    {
+        &quot;attributes&quot;: {
+            ...attributes
+        },
+        &quot;id&quot;: ...id,
+        &quot;label&quot;: ...id
+    },
+    ...
+    ],
+    &quot;edges&quot;: [
+        {
+            &quot;attributes&quot;: {
+                ...attributes
+            },
+            &quot;id&quot;: ...id,
+            &quot;source&quot;: ...node id,
+            &quot;target&quot;: ...node id
+        },
+        ...
+    ]
+}
+</pre></div>
+</div>
+</div>
 <div class="section" id="mapping">
 <h2>Mapping<a class="headerlink" href="#mapping" title="Permalink to this headline"></a></h2>
 <p>When successfully loading a dataset the user is shown a full-screen view of the

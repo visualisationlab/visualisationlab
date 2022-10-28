@@ -16,6 +16,7 @@ Visgraph expects graphs to be uploaded in the following format:
 
 
 .. code-block:: JSON
+
     {
         "attributes": {
             "edgeType": "(un)directed",
