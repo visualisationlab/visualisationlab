@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Usage &mdash; Visgraph 0.1 documentation</title><link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <title>Usage &mdash; Visgraph 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
-  <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -69,8 +74,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Usage</li>
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Usage</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/usage.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -80,8 +85,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="usage">
-<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline"></a></h1>
+  <section id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h1>
 <p>Visgraph is designed to do three things: visualize networks collaboratively in a browser, make changes to those networks either manually or via a script,
 and render the networks in 3D using an augmented reality headset. The user can upload a network in two formats: JSON and GraphML. The JSON format
 follows Cytoscape.js, and the GraphML format follows Gephi.</p>
@@ -89,8 +94,8 @@ follows Cytoscape.js, and the GraphML format follows Gephi.</p>
 accessing the Visgraph server, the page prompts the user to either enter a URL pointing to the dataset or join an existing visualization session using the session ID.
 A unique session ID identifies each visualization session and multiple
 users can connect or disconnect from the same session at any time.</p>
-<div class="section" id="graph-format">
-<h2>Graph Format<a class="headerlink" href="#graph-format" title="Permalink to this headline"></a></h2>
+<section id="graph-format">
+<h2>Graph Format<a class="headerlink" href="#graph-format" title="Permalink to this heading"></a></h2>
 <p>Visgraph expects graphs to be uploaded in the following format:</p>
 <div class="highlight-JSON notranslate"><div class="highlight"><pre><span></span>{
     &quot;attributes&quot;: {
@@ -120,36 +125,36 @@ users can connect or disconnect from the same session at any time.</p>
 }
 </pre></div>
 </div>
-</div>
-<div class="section" id="mapping">
-<h2>Mapping<a class="headerlink" href="#mapping" title="Permalink to this headline"></a></h2>
+</section>
+<section id="mapping">
+<h2>Mapping<a class="headerlink" href="#mapping" title="Permalink to this heading"></a></h2>
 <p>When successfully loading a dataset the user is shown a full-screen view of the
 visualization. The visualization is composed of two main parts: the nodes and
 edges, and the controls which are used to interact with the visualization. Nodes and edges
 are set out on a 2D plane through a <em>layout</em> algorithm. The current layout algorithm
 can be chosen by navigating to the <strong>Mapping</strong> tab in the controls, and by selecting the
 <strong>Layout Mapping</strong> dropdown menu.</p>
-<div class="section" id="layout-mapping">
-<h3>Layout Mapping<a class="headerlink" href="#layout-mapping" title="Permalink to this headline"></a></h3>
+<section id="layout-mapping">
+<h3>Layout Mapping<a class="headerlink" href="#layout-mapping" title="Permalink to this heading"></a></h3>
 <p>The layout mapping algorithm sets out the nodes and edges on a 2D plane. Some algorithms (such as circle, null, breadth-first or grid) are deterministic and will always produce
 the same layout for a given dataset. Other <em>force-directed</em>  algorithms (such as fcose, cise or spread) are stochastic and will create a different layout each time they are run, with an undetermined running time. Layout generation is capped at sixty seconds, after which the server will return an error message.</p>
 <p>Each layout algorithm has several parameters, depending on the algorithm. When the user presses the <strong>apply</strong> button, the server generates the layout and updates the visualization.
 The user can then interact with the visualization for all users. While the server generates the layout, users cannot change the attributes of the graph until layout generation finalizes.</p>
-</div>
-<div class="section" id="node-mapping">
-<h3>Node Mapping<a class="headerlink" href="#node-mapping" title="Permalink to this headline"></a></h3>
+</section>
+<section id="node-mapping">
+<h3>Node Mapping<a class="headerlink" href="#node-mapping" title="Permalink to this heading"></a></h3>
 <p>Each node in the graph has visual attributes such as size, colour and transparency, which the user can map to data associated with that node in the <strong>Node Mappings</strong> dropdown.
 The user can set these parameters to generate their desired visualization.
 Visual mappings are personal to each user and are not shared with other collaborators in the graph.</p>
-</div>
-<div class="section" id="edge-mapping">
-<h3>Edge Mapping<a class="headerlink" href="#edge-mapping" title="Permalink to this headline"></a></h3>
+</section>
+<section id="edge-mapping">
+<h3>Edge Mapping<a class="headerlink" href="#edge-mapping" title="Permalink to this heading"></a></h3>
 <p>Each edge in the graph has visual attributes such as width, colour and transparency, which the user can map to data associated with that edge in the <strong>Edge Mappings</strong> dropdown.
 The user can set these parameters to generate their desired visualization.</p>
-</div>
-</div>
-<div class="section" id="simulation">
-<h2>Simulation<a class="headerlink" href="#simulation" title="Permalink to this headline"></a></h2>
+</section>
+</section>
+<section id="simulation">
+<h2>Simulation<a class="headerlink" href="#simulation" title="Permalink to this heading"></a></h2>
 <p>The <strong>Simulation</strong> tab allows users to add, remove and run existing simulation scripts connected via an API. Each script receives the current data stored in the visualization, and can modify the data in any way. The user can then run the script to update the visualization.
 The script prepends the state to a timeline history and the user can use the timeline controls (First, Previous, Next and Last) to navigate through the timeline. Whenever the user runs a script, it takes the current point in the timeline as the input and removes all subsequent points, replacing them with the updated state.</p>
 <p>A script is connectd by running it using the supplied session ID and API key.
@@ -157,8 +162,8 @@ The <strong>Add</strong> button generates an API key, which is unique to each se
 Each script can have a set of parameters accessible through the <strong>settings</strong> button next to that script.
 These parameters can be of the <strong>integer</strong>, <strong>float</strong>, <strong>boolean</strong> or <strong>string</strong> type.
 The <strong>step</strong> button runs the selected script for a configurable number of steps.</p>
-<div class="section" id="developing-scripts">
-<h3>Developing Scripts<a class="headerlink" href="#developing-scripts" title="Permalink to this headline"></a></h3>
+<section id="developing-scripts">
+<h3>Developing Scripts<a class="headerlink" href="#developing-scripts" title="Permalink to this heading"></a></h3>
 <p>Scripts are written in <strong>Python 3</strong>. Visgraph has its own library which can be installed by running:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install visgraph
 </pre></div>
@@ -213,21 +218,21 @@ parameter based on the given type.</p>
 some caveats. Mainly, it could encourage developers to write scripts that
 are incompatible with the web interface. For example, suppose the script updates
 the parameters (which depend on the outputted graph state). In that case, the output may tempt the user to change these parameters from the interface or aspects of the graph, rendering the script broken on subsequent runs.</em></p>
-</div>
-</div>
-<div class="section" id="search">
-<h2>Search<a class="headerlink" href="#search" title="Permalink to this headline"></a></h2>
+</section>
+</section>
+<section id="search">
+<h2>Search<a class="headerlink" href="#search" title="Permalink to this heading"></a></h2>
 <p>The <strong>Search Tab</strong> allows the user to access each node and edge in the network. By clicking on either nodes or edges in the list, the user selects that object in the network.
 If a node is selected, all edges connected to that node are highlighted. If an edge is selected, both nodes connected to that edge are highlighted. The search box uses <em>fuzzy searching</em>
 to find nodes and edges that match the search query. The search box also supports regular expressions.</p>
-</div>
-<div class="section" id="session">
-<h2>Session<a class="headerlink" href="#session" title="Permalink to this headline"></a></h2>
+</section>
+<section id="session">
+<h2>Session<a class="headerlink" href="#session" title="Permalink to this heading"></a></h2>
 <p>The <strong>Session Tab</strong> enables the user to change their username for that session, and see other connected users, as well as sesion info such as the original graph URL,
 session ID, and expiration date. Every session expires after six hours by default, at which point the graph information will be lost. The user can also connect an AR headset
 using the connect button.</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

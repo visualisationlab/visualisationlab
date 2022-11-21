@@ -17,12 +17,10 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'Visgraph'
-copyright = '2022, Miles van der Lely'
-author = 'Miles van der Lely'
+project = 'Visualization Lab'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1'
+release = '0.2'
 
 
 # -- General configuration ---------------------------------------------------

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Git &mdash; Visualization Lab 0.2 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/sphinx_highlight.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Agenda" href="agenda.html" />
+    <link rel="prev" title="UvA Visualization Lab Documentatie" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Visualization Lab
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#git-lfs">Git LFS</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-to-do-with-big-files-in-github">What to do with BIG files in Github?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#when-to-use-it">When to use it?</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-use-git-lfs-in-a-new-repository">How to use git LFS in a new repository?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-use-git-lfs-in-an-existing-repository">How to use git LFS in an existing repository?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="agenda.html">Agenda</a></li>
+<li class="toctree-l1"><a class="reference internal" href="visgraph/index.html">Visgraph Documentation</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Visualization Lab</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Git</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/git.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="git">
+<h1>Git<a class="headerlink" href="#git" title="Permalink to this heading"></a></h1>
+<p><a class="reference external" href="https://github.com/visualisationlab">Visualizationlab Github page</a></p>
+<section id="git-lfs">
+<h2>Git LFS<a class="headerlink" href="#git-lfs" title="Permalink to this heading"></a></h2>
+<section id="what-to-do-with-big-files-in-github">
+<h3>What to do with BIG files in Github?<a class="headerlink" href="#what-to-do-with-big-files-in-github" title="Permalink to this heading"></a></h3>
+<p>GitHub doesn’t like big files and will reject anything above 100MB. Git provides a solution in Git Large File Storage (or Git LFS), GitHub also hosts its own version of Git LFS. However we decided to host our own implementation of Git LFS at the Visualisation Lab.</p>
+<section id="when-to-use-it">
+<h4>When to use it?<a class="headerlink" href="#when-to-use-it" title="Permalink to this heading"></a></h4>
+<p>Try to avoid uploading too many big files to the GitHub repository as it makes working with the repository difficult and slow. What files should or should not be added to Git LFS is on your own accord. In general, I would try to move any non-text assets that can – on their own – be above 5MB into Git LFS. In the case of – for instance – audio assets, If it’s just sound effects, I would keep them in the GitHub repository but if it involves a lot of music files, I would move all audio files into Git LFS.</p>
+<p>For more information check: <a class="reference external" href="https://git-lfs.github.com/">https://git-lfs.github.com/</a></p>
+</section>
+</section>
+<section id="how-to-use-git-lfs-in-a-new-repository">
+<h3>How to use git LFS in a new repository?<a class="headerlink" href="#how-to-use-git-lfs-in-a-new-repository" title="Permalink to this heading"></a></h3>
+<p>In your repository make a file called .lfsconfig</p>
+<p>Add the following text:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[lfs]
+    url = “http://visualisationlab.science.uva.nl:8087/”
+</pre></div>
+</div>
+<p>The next step is to ask the admin of the visualisation lab for a git LFS account.
+Mail: j.g.vanderkaaij[at]uva.nl</p>
+<p>Make sure you have downloaded and installed the standard Git command line extension. After that, set up Git LFS for your user account by running:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">lfs</span> <span class="n">install</span>
+</pre></div>
+</div>
+<p>You only need to run this once per user account.</p>
+<p>In each Git repository where you want to use Git LFS, select the file types you’d like Git LFS to manage (or directly edit your .gitattributes). You can configure additional file extensions at any time. In this example, I’m tracking PSD files.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git lfs track “*.psd”
+</pre></div>
+</div>
+<p>Now make sure .gitattributes is tracked:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">add</span> <span class="o">.</span><span class="n">gitattributes</span>
+</pre></div>
+</div>
+<p>Note that defining the file types in Git LFS will not convert any pre-existing files to Git LFS. Files on other branches or in your prior commit history will remain in your existing git repository. To migrate those files use the Git LFS migrate command, which has a range of options designed to suit various potential use cases. See below for more information.</p>
+<p>There is no step three. Just commit and push to GitHub as you normally would; for instance, if your current branch is named main:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git add file.psd
+git commit -m “Add design file”
+git push origin main
+</pre></div>
+</div>
+<p>All the PSD files in your repository will now be stored in our own Git LFS and your normal repository will only keep a lightweight reference to that file keeping your GitHub repository a lot leaner.</p>
+</section>
+<section id="how-to-use-git-lfs-in-an-existing-repository">
+<h3>How to use git LFS in an existing repository?<a class="headerlink" href="#how-to-use-git-lfs-in-an-existing-repository" title="Permalink to this heading"></a></h3>
+<p>Clone the existing repository.
+Ask the admin for an account on the LFS server.
+Mail: j.g.vanderkaaij[at]uva.nl</p>
+<p>Run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git lfs fetch –all
+</pre></div>
+</div>
+<p>How to Migrate existing files in your repository over to Git LFS?</p>
+<p>Git LFS Migrate:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git lfs migrate import –include=”*.mp4″
+</pre></div>
+</div>
+<p>This will not garbage collect your original git repository, that still needs to happen:</p>
+<p><a class="reference external" href="https://stackoverflow.com/questions/51782043/what-does-git-lfs-migrate-do">https://stackoverflow.com/questions/51782043/what-does-git-lfs-migrate-do</a></p>
+<p>“The only problem is that the original git-objects of the binary files are still in the .git folder because you didn’t garbage-collected them.”</p>
+<p>You should follow the git lfs migration tutorial which explains:</p>
+<p>The above successfully converts pre-existing git objects to lfs objects. However, the regular objects still persist in the .git directory. These will be cleaned up eventually by git, but to clean them up right away, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>git reflog expire –expire-unreachable=now –all
+git gc –prune=now
+</pre></div>
+</div>
+<p>After running that your .git should be the same size, but if you go into it you should see that objects should be much smaller than before the migrations and that LFS holds the migrated files.</p>
+<p>When other developers/applications clone the repo, the large files in the git history will be ignored.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="UvA Visualization Lab Documentatie" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="agenda.html" class="btn btn-neutral float-right" title="Agenda" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
