@@ -1,4 +1,4 @@
-UvA Visualization Lab Documentatie
+UvA Visualisation Lab Documentatie
 ==================================
 
 

@@ -17,7 +17,7 @@ import sphinx_rtd_theme
 
 # -- Project information -----------------------------------------------------
 
-project = 'Visualization Lab'
+project = 'Visualisation Lab'
 
 # The full version, including alpha/beta/rc tags
 release = '0.2'
