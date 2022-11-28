@@ -10,4 +10,5 @@ UvA Visualization Lab Documentatie
 .. toctree::
     git
     agenda
+    sphinx
     visgraph/index.rst
