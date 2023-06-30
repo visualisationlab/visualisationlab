@@ -1,5 +1,4 @@
-Visgraph
-=======
+Visualisation Lab Documentation
+===============================
 
-**Visgraph** (/lu'make/) is a collection of tools designed for visualizing
-large networks.
+Documentation for the Visualisation Lab at the University of Amsterdam.

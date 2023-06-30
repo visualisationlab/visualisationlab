@@ -1,8 +1,0 @@
-Hosting Visgraph
-################
-
-Installation
-------------
-
-Etc.
-

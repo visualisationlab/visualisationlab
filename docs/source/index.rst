@@ -1,8 +1,6 @@
 UvA Visualization Lab Documentatie
 ==================================
 
-
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
@@ -11,4 +9,4 @@ UvA Visualization Lab Documentatie
     git
     agenda
     sphinx
-    visgraph/index.rst
+    citadel/index.rst
