@@ -1,4 +1,4 @@
-Sphinx how to
+How to build the documentation
 ==================================
 
 Getting started:
@@ -8,7 +8,7 @@ The idea behind Sphinx is to write documents in the rst format and build the doc
 After changes just push to the repository and the documents will be updated.
 The repository can be found here: https://github.com/visualisationlab/visualisationlab
 
-init virtual environment:
+Initialize the virtual environment (.venv or another name)
 ::
     python -m venv .venv
     $ source .venv/bin/activate
@@ -17,7 +17,18 @@ init virtual environment:
 
 to build the documents:
 ::
-    sphinx-build -b html docs/source/ docs/build/html/
+    sphinx-build -b html docs/source/ docs/build/html/John W. Romein
+
+Or:
+::
+    make html
+
+When changing the documentation structure (adding or removing files) the make clean command should be used to remove the old build files.
+
+::
+    make clean
+
+To view the built documents open the index.html file in the build/html folder.
 
 RST cheatsheet:
 https://bashtage.github.io/sphinx-material/rst-cheatsheet/rst-cheatsheet.html
