@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Index &mdash; Visualisation Lab 0.2 documentation</title>
+  <title>&lt;no title&gt; &mdash; Visualisation Lab 0.2 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
 
@@ -18,7 +19,7 @@
         <script src="_static/doctools.js?v=888ff710"></script>
         <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
-    <link rel="index" title="Index" href="#" />
+    <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" /> 
 </head>
 
@@ -62,8 +63,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Index</li>
+      <li class="breadcrumb-item active">&lt;no title&gt;</li>
       <li class="wy-breadcrumbs-aside">
+            <a href="_sources/motioncapture.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -71,12 +73,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-
-<h1 id="index">Index</h1>
-
-<div class="genindex-jumpbox">
- 
-</div>
+  <p>### 28-11-2023 Session</p>
+<p>For the Ecoshop project an avatar giving a presentation was needed. With this came the following requirements:</p>
+<ul class="simple">
+<li><p>Motion Capturing (Vicon)</p></li>
+<li><p>Faceware</p></li>
+<li><p>Audio Recording (lavalier + interface)</p></li>
+<li><p>Presentation Recording (Powerpoint &amp; OBS)</p></li>
+</ul>
+<p>To session itself consisted of an actress, a person operating the motion capture and Faceware, a person recording the audio and screengrab and a person guiding the autocue.</p>
+<p>The overall session took from about 13:00 to 17:00
+#### Experience</p>
+<p><strong>Technical</strong>
+Getting everything setup took over an hour. Calibrating the motion capturing took a bit longer than it should as we had some problems with jitter but after a recalibration it ran perfectly smooth in Shogun 10. The recorder for Faceware didn’t want to auto-connect. In the recorder machine there is a config menu with the local IP (192.168.0.2) after manually filling in the IP it connected correctly.</p>
+<p>Actress seemed mostly comfortable wearing equipment for a longer time - video sender did get hot after a while. Also complained about her back - maybe standing on a hard floor without shoes? or just the lack of sitting. Also the light shine in her face between recordings, maybe good to figure out how the actress could have controlled that herself.</p>
+<p><strong>Operational</strong>
+We had two operational recording failures. One was because of noise of chairs being moved upstairs - the other one was a colleague coming into the room who didn’t know a recording was taking place. We solved it by asking the people upstairs for a bit of quiet - and hanging up a sign on the door. Although I don’t think the sign was visible enough as a student almost walked into the lab (and reported he didn’t notice the sign)</p>
+<p><strong>Recording Sync</strong>
+The sync of all the different recordings was a bit difficult as the audio and motion capturing were not connected. This meant that while the audio recordings of failed captures were deleted, the motion captures were saved. This will take some time in post to figure out what audio recording file goes with what motion capture.</p>
+<p>We also made the actress clap her hands to be able to match the motion with the audio later.</p>
+<p>#### Further Learnings</p>
+<p>Syncing all the recordings together automatically would be nice - for that we would need to find out how to sync audio recording to motion capturing. This would also prevent the clapping of the hands.</p>
+<p>Naming of files and takes.</p>
+<p>OBS had audio mee moeten laten recorden om het makkelijker the syncen - misschien OBS ook laten syncen met startknop in Vicon.</p>
+<p>Recording session was placed in the agenda but it wasn’t clear for everyone - a lot of people were present and didn’t knew the lab was reserved.</p>
 
 
            </div>

@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Git &mdash; Visualisation Lab 0.2 documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=10f1778b"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -85,21 +87,21 @@
            <div itemprop="articleBody">
              
   <section id="git">
-<h1>Git<a class="headerlink" href="#git" title="Permalink to this heading"></a></h1>
+<h1>Git<a class="headerlink" href="#git" title="Link to this heading"></a></h1>
 <p><a class="reference external" href="https://github.com/visualisationlab">Visualizationlab Github page</a></p>
 <section id="git-lfs">
-<h2>Git LFS<a class="headerlink" href="#git-lfs" title="Permalink to this heading"></a></h2>
+<h2>Git LFS<a class="headerlink" href="#git-lfs" title="Link to this heading"></a></h2>
 <section id="what-to-do-with-big-files-in-github">
-<h3>What to do with BIG files in Github?<a class="headerlink" href="#what-to-do-with-big-files-in-github" title="Permalink to this heading"></a></h3>
+<h3>What to do with BIG files in Github?<a class="headerlink" href="#what-to-do-with-big-files-in-github" title="Link to this heading"></a></h3>
 <p>GitHub doesn’t like big files and will reject anything above 100MB. Git provides a solution in Git Large File Storage (or Git LFS), GitHub also hosts its own version of Git LFS. However we decided to host our own implementation of Git LFS at the Visualisation Lab.</p>
 <section id="when-to-use-it">
-<h4>When to use it?<a class="headerlink" href="#when-to-use-it" title="Permalink to this heading"></a></h4>
+<h4>When to use it?<a class="headerlink" href="#when-to-use-it" title="Link to this heading"></a></h4>
 <p>Try to avoid uploading too many big files to the GitHub repository as it makes working with the repository difficult and slow. What files should or should not be added to Git LFS is on your own accord. In general, I would try to move any non-text assets that can – on their own – be above 5MB into Git LFS. In the case of – for instance – audio assets, If it’s just sound effects, I would keep them in the GitHub repository but if it involves a lot of music files, I would move all audio files into Git LFS.</p>
 <p>For more information check: <a class="reference external" href="https://git-lfs.github.com/">https://git-lfs.github.com/</a></p>
 </section>
 </section>
 <section id="how-to-use-git-lfs-in-a-new-repository">
-<h3>How to use git LFS in a new repository?<a class="headerlink" href="#how-to-use-git-lfs-in-a-new-repository" title="Permalink to this heading"></a></h3>
+<h3>How to use git LFS in a new repository?<a class="headerlink" href="#how-to-use-git-lfs-in-a-new-repository" title="Link to this heading"></a></h3>
 <p>In your repository make a file called .lfsconfig</p>
 <p>Add the following text:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[lfs]
@@ -131,7 +133,7 @@ git push origin main
 <p>All the PSD files in your repository will now be stored in our own Git LFS and your normal repository will only keep a lightweight reference to that file keeping your GitHub repository a lot leaner.</p>
 </section>
 <section id="how-to-use-git-lfs-in-an-existing-repository">
-<h3>How to use git LFS in an existing repository?<a class="headerlink" href="#how-to-use-git-lfs-in-an-existing-repository" title="Permalink to this heading"></a></h3>
+<h3>How to use git LFS in an existing repository?<a class="headerlink" href="#how-to-use-git-lfs-in-an-existing-repository" title="Link to this heading"></a></h3>
 <p>Clone the existing repository.
 Ask the admin for an account on the LFS server.
 Mail: j.g.vanderkaaij[at]uva.nl</p>

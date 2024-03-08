@@ -1,21 +1,23 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Overview &mdash; Visualisation Lab 0.2 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../_static/documentation_options.js?v=10f1778b"></script>
+        <script src="../_static/doctools.js?v=888ff710"></script>
+        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -89,7 +91,7 @@
            <div itemprop="articleBody">
              
   <section id="overview">
-<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h1>
+<h1>Overview<a class="headerlink" href="#overview" title="Link to this heading"></a></h1>
 <p>The Citadel application is a tool for visualizing graphs through the web
 browser. Users can explore their data collaboratively by uploading their datasets to the cloud and accessing the visualization through a web browser. By leveraging the 3D capabilities of the Microsoft Hololens 2,
 users can view the graph in immersive 3D within their working environment.
@@ -98,7 +100,7 @@ Lastly, developers can interface with the Citadel API to engineer graph simulati
 The 3D visualization is written in C# using the Unity game engine. This documentation is designed to help developers understand the architecture of the Citadel application and how to extend it.</p>
 <p>Citadel uses a client/server architecture.</p>
 <section id="server">
-<h2>Server<a class="headerlink" href="#server" title="Permalink to this heading"></a></h2>
+<h2>Server<a class="headerlink" href="#server" title="Link to this heading"></a></h2>
 <p>Each client connects to a Citadel server. The server is responsible for:</p>
 <ul class="simple">
 <li><p>Managing user sessions</p></li>
@@ -112,7 +114,7 @@ The 3D visualization is written in C# using the Unity game engine. This document
 <p>Each session has its own dataset and data history. Multiple users can connect to the same session. The server is responsible for managing the state of the session and communicating changes to all connected clients.</p>
 </section>
 <section id="client">
-<h2>Client<a class="headerlink" href="#client" title="Permalink to this heading"></a></h2>
+<h2>Client<a class="headerlink" href="#client" title="Link to this heading"></a></h2>
 <p>The client is a web application that allows users to connect to a Citadel server session and visualize the graph. The client is responsible for:</p>
 <ul class="simple">
 <li><p>Requesting a new session from the server</p></li>
@@ -123,7 +125,7 @@ The 3D visualization is written in C# using the Unity game engine. This document
 </ul>
 </section>
 <section id="ar-visualisation">
-<h2>AR Visualisation<a class="headerlink" href="#ar-visualisation" title="Permalink to this heading"></a></h2>
+<h2>AR Visualisation<a class="headerlink" href="#ar-visualisation" title="Link to this heading"></a></h2>
 <p>The AR visualisation is a Unity application that runs on the Microsoft Hololens 2. The AR visualisation is responsible for:</p>
 <ul class="simple">
 <li><p>Connecting to a Citadel server session through a client API endpoint</p></li>
@@ -134,7 +136,7 @@ The 3D visualization is written in C# using the Unity game engine. This document
 <p>The AR visualisation is designed to be a passive viewer of the graph. It does not send requests to the server to change the underlying dataset.</p>
 </section>
 <section id="api">
-<h2>API<a class="headerlink" href="#api" title="Permalink to this heading"></a></h2>
+<h2>API<a class="headerlink" href="#api" title="Link to this heading"></a></h2>
 <p>The Citadel server exposes an API for clients to connect to. This connection runs through the server and is used to communicate changes to the underlying dataset.</p>
 </section>
 </section>
